@@ -16,7 +16,7 @@ jobs:
 
       - name: Stop Old Container
        
-        run: docker rm -f $(sudo docker ps -aq) || true
+        run: docker rm -f $(docker ps -aq) || true
 
       - name: Run New Container
         run: docker run -d -p 80:80 my-calc-app
